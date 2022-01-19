@@ -11,7 +11,11 @@ import Cart from './Main/Shop/Cart/Cart';
 import Contact from './Main/Shop/Contact/Contact';
 import Home from './Main/Shop/Home/Home';
 import Search from './Main/Shop/Search/Search';
-
+import SearchPage from './Main/Shop/Search/SearchPage';
+import HeaderShop from './Main/Shop/HeaderShop/HeaderShop';
+import Collection from './Main/Shop/Home/Collection/Collection';
+import TopProduct from './Main/Shop/Home/TopProduct/TopProduct';
+import ListCategory from './Main/Shop/Home/ListCategory/ListCategory';
 export {
   Authentication,
   ChangeInfo,
@@ -26,4 +30,9 @@ export {
   Contact,
   Home,
   Search,
+  SearchPage,
+  HeaderShop,
+  Collection,
+  TopProduct,
+  ListCategory
 };

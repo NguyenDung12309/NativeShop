@@ -1,18 +1,28 @@
 import React from 'react';
-import {Dimensions} from 'react-native';
+import {Dimensions, View} from 'react-native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {NavStack, Authentication, OrderHistory, ChangeInfo} from '..';
+import {
+  NavStack,
+  Authentication,
+  OrderHistory,
+  ChangeInfo,
+  HeaderShop,
+} from '..';
 
 function NavDrawer(props) {
   const Drawer = createDrawerNavigator();
   const {height} = Dimensions.get('window');
   return (
     <Drawer.Navigator
-      screenOptions={{
+      screenOptions={({navigation, route}) => ({
+        headerTitle: () => <HeaderShop ></HeaderShop>,
         headerStyle: {
-          height: height/8,
-        }
-      }}>
+          height: height / 8,
+          backgroundColor: '#34B089',
+        },
+        headerTitleAlign: 'center',
+        headerTintColor: "#fff"
+      })}>
       <Drawer.Screen name="Home" component={NavStack} />
       <Drawer.Screen name="Authentication" component={Authentication} />
       <Drawer.Screen name="OrderHistory" component={OrderHistory} />

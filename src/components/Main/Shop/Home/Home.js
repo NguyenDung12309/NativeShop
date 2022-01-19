@@ -1,15 +1,13 @@
 import React from 'react';
-import {Button, Text, View} from 'react-native';
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from '@react-navigation/stack';
-import {Authentication, ChangeInfo, OrderHistory, Menu, Main} from '../../../';
-import {NavigationContainer} from '@react-navigation/native';
-function Home({navigation}) {
+import {View} from 'react-native';
+import {Collection, TopProduct, ListCategory} from '../../../';
+
+function Home() {
   return (
     <View>
-      <Text>home</Text>
+      <Collection/>
+      <ListCategory/>
+      <TopProduct/>
     </View>
   );
 }
